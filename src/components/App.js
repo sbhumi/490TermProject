@@ -1,9 +1,23 @@
+import React, {useState} from 'react';
 import logo from '../logo.svg';
 import { Container, Row, Col } from 'react-bootstrap'
+import Results from '../components/Results.js';
 import '../styleSheets/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 function App() {
+
+  const [selectedFile, setSelectedFile] = useState();
+	const [isFilePicked, setIsFilePicked] = useState(false);
+
+	const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+    {/*setIsSelected(true);*/}
+	};
+
+	const handleSubmission = () => {
+	};
+
   return (
     <div className="App">
       <header className="App-header">
@@ -24,10 +38,36 @@ function App() {
           <Col>
             <div className="App-get-started">
               <div className="content-box">
-                <button className="btn btn-primary">Get Started</button>
+                <p>Upload a jpeg file below to add your MRI file to be analyzed for Alzheimer's.<br></br></p>
+                <p><input type = "file" className = "mriScan" name = "mri" onChange={changeHandler}/></p>
+                <div>
+                  <button className="start" onClick={handleSubmission}>Add MRI Scan</button>
+                </div>
               </div>
             </div>
           </Col>
+        </Row>
+
+        <Row><br></br><br></br><br></br></Row>
+
+        <Row>
+          {/*
+          {isSelected ? (
+          <div>
+            <Results/>
+          </div>
+          ) : (
+            <p>Select a file to show results</p>
+          )}
+          */}
+        </Row>
+
+        <Row>
+          <Col></Col><Col></Col><Col></Col><Col></Col>
+          <Col>
+            <div className = "content-box" align = "center"><button className = "run">Run Algorithm</button></div>
+          </Col>
+          <Col></Col><Col></Col><Col></Col><Col></Col>
         </Row>
       </Container>
 

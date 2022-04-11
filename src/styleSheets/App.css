@@ -19,8 +19,8 @@
   text-align: left;
   padding-left: 5vw;
   padding-top: 20vh;
-  min-width: 50vw;
-  font-size: 21pt;
+  min-width: 43vw;
+  font-size: 24pt;
 }
 
 .App-get-started {
@@ -28,7 +28,8 @@
   vertical-align: center;
   padding-right: 5vw;
   padding-top: 20vh;
-  min-width: 20vw;
+  min-width: 25vw;
+  font-size: 16pt;
   display: left;
 }
 
@@ -38,10 +39,38 @@
   padding: 20px;
   border-radius: 25px;
   color:white;
+  font-family: "times new roman";
+  text-align: center;
+}
+
+.mriScan {
+  background-color:#3d4f71;
+  border-color: #3d4f71;
+  color:beige;
+  font-size: 11pt;
 }
 
 .start {
-  background-color:#282c34;
+  background-color:#3d4f71;
+  border-color: #3d4f71;
+  color:beige;
+  font-size: 11pt;
+}
+
+.run {
+  background-color:#3d4f71;
+  border-color: #3d4f71;
+  color:beige;
+  font-size: 13pt;
+  min-width: 20vw;
+  min-height: 5vh;
+}
+
+.run:hover {
+  transition: all 0.7s ease;
+  background-color:#3d715c;
+  border-color:#3d715c;
+  letter-spacing: 2px;
 }
 
 .appFooter {
