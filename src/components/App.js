@@ -14,7 +14,7 @@ function App() {
   
   const [isButtonPressed, setButtonPressed] = useState();
 
-  const [prediction, setPrediction] = useState("Likely to have Alzhiemer's");
+  const [prediction, setPrediction] = useState("Upload an image");
 
 /*
   useEffect(() => {
