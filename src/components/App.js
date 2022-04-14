@@ -1,11 +1,7 @@
 import React, {useState, useEffect} from 'react';
-import logo from '../logo.svg';
 import { Container, Row, Col } from 'react-bootstrap'
-import Results from '../components/Results.js';
 import '../styleSheets/App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import * as tf from '@tensorflow/tfjs';
-import { tensor } from '@tensorflow/tfjs';
 import axios from 'axios';
 
 function App() {
@@ -17,43 +13,38 @@ function App() {
 
   const [prediction, setPrediction] = useState("Upload an image");
 
-
-
   const callFlask = () => {
 
     // Post -> Flask
-    var imgtag = document.getElementById("output");
+    console.log("calling flask before");
     let formData = new FormData();
     formData.append("image", selectedFile);
 
     axios.post('/predict', formData).then(function (response) {
       setPrediction(response.data);
     });
+
+    console.log("calling flask");
+
+    renderScan();
   }
 
-	const changeHandler = (event) => {
-		setSelectedFile(event.target.files[0]);
+  const renderScan = () => {
     var reader = new FileReader();
 
     var imgtag = document.getElementById("output");
-    imgtag.title = selectedFile.name;
 
     reader.onload = function(event) {
       imgtag.src = event.target.result;
     };
 
     reader.readAsDataURL(selectedFile);
+  }
 
-    console.log(imgtag);
-
-    {/*setIsSelected(true);*/}
-	};
-
-	const handleSubmission = (event) => {
-    
-
-    var imgtag = document.getElementById("myimage");
-
+	const changeHandler = (event) => {
+		setSelectedFile(event.target.files[0]);
+    document.getElementById("output").src = "";
+    setPrediction("Select the Run Algorithm Button");
 	};
 
   return (
@@ -67,20 +58,17 @@ function App() {
           <Col>
             <div className="App-desc">
               <div className="content-box">
-                <p>Welcome to Team Artemis' Alzheimer's Detection Application!
-                  To get started, click on the button on the right.</p>
+                Welcome to Team Artemis' Alzheimer's Detection Application!
+                  To get started, click on the button on the right.
               </div>
             </div>
           </Col>
           
-          <Col>
+          <Col className="rightSideColumn">
             <div className="App-get-started">
               <div className="content-box">
                 <p>Upload a jpeg file below to add your MRI file to be analyzed for Alzheimer's.<br></br></p>
                 <p><input type = "file" className = "mriScan" name = "mri" onChange={changeHandler}/></p>
-                <div>
-                  <button className="start" onClick={handleSubmission}>Add MRI Scan</button>
-                </div>
               </div>
             </div>
           </Col>
@@ -101,16 +89,23 @@ function App() {
         </Row>
 
         <Row>
-          <Col></Col><Col></Col><Col></Col><Col></Col>
-          <Col>
+          <Col className="centeredBox">
             <div className = "content-box" align = "center"><button className = "run" onClick={() => callFlask()}>Run Algorithm</button></div>
-            <div>
-              <img id="output"></img>
-              <p>Prediction: {prediction}</p>
+          </Col>
+        </Row>
+
+        <Row>
+        <Col></Col><Col></Col><Col></Col><Col></Col>
+          <Col className="centeredBox">
+            <div className="predictionOutput">
+              <img className="brainScan" id="output"></img> 
+              <div className="content-box predictText">{prediction}</div><br/>
             </div>
           </Col>
           <Col></Col><Col></Col><Col></Col><Col></Col>
         </Row>
+        <Row><br/><br/><br/></Row>
+        <Row><br/><br/><br/></Row>
       </Container>
 
       <footer>

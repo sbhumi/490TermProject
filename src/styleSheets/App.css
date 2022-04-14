@@ -16,11 +16,17 @@
 }
 
 .App-desc {
+  vertical-align: center;
   text-align: left;
   padding-left: 5vw;
   padding-top: 20vh;
-  min-width: 43vw;
+  min-width: 15vw;
   font-size: 24pt;
+}
+
+.rightSideColumn {
+  display: flex;
+  align-items: center;
 }
 
 .App-get-started {
@@ -28,19 +34,22 @@
   vertical-align: center;
   padding-right: 5vw;
   padding-top: 20vh;
-  min-width: 25vw;
+  min-width: 15vw;
   font-size: 16pt;
   display: left;
+  
 }
 
 .content-box {  
   background-color: rgb(147, 184, 205);
+  
   float: left;
   padding: 20px;
   border-radius: 25px;
   color:white;
   font-family: "times new roman";
   text-align: center;
+
 }
 
 .mriScan {
@@ -71,6 +80,30 @@
   background-color:#3d715c;
   border-color:#3d715c;
   letter-spacing: 2px;
+}
+
+
+.brainScan {
+  padding: 10px;
+  border-radius: 25px;
+}
+
+.predictionOutput {
+  padding-bottom: 50px;
+}
+
+.predictText {
+  min-width: 20vw;
+  align-items: center;
+  text-align: center;
+  vertical-align: center;
+  font-size: 14pt;
+}
+
+.centeredBox {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .appFooter {

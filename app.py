@@ -74,7 +74,7 @@ def rgb2gray(rgb):
     return gray.reshape(gray.shape[0], gray.shape[1])
 
 def full_stack(img):
-    model = keras.models.load_model("C://Users//cchap//source//repos//CS 490 Alzheimers Project//490TermProject//model files//model files//new_model.h5")
+    model = keras.models.load_model(os.getcwd() + "\\model files\\new_model.h5")
     img = np.array(Image.open(img))
     img = universal_preprocess(img)
     if(model.predict(img) > 0.5):
