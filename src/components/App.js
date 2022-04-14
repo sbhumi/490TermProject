@@ -13,6 +13,10 @@ function App() {
 
   const [prediction, setPrediction] = useState("Upload an image");
 
+  useEffect(() => {
+    document.title = "AI for Alzheimer's"
+ }, []);
+  
   const callFlask = () => {
 
     // Post -> Flask
