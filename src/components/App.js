@@ -77,15 +77,6 @@ function App() {
         <Row><br></br><br></br><br></br></Row>
 
         <Row>
-          {/*
-          {isSelected ? (
-          <div>
-            <Results/>
-          </div>
-          ) : (
-            <p>Select a file to show results</p>
-          )}
-          */}
         </Row>
 
         <Row>
