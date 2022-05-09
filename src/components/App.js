@@ -11,7 +11,7 @@ function App() {
   
   const [isButtonPressed, setButtonPressed] = useState();
 
-  const [prediction, setPrediction] = useState("Upload an image");
+  const [prediction, setPrediction] = useState("Upload an scan");
 
   useEffect(() => {
     document.title = "AI for Alzheimer's"
@@ -58,7 +58,7 @@ function App() {
           <Col className="rightSideColumn">
             <div className="App-get-started">
               <div className="content-box">
-                <p>Upload a jpeg file below to add your MRI file to be analyzed for Alzheimer's.<br></br></p>
+                <p>Upload a .nifti file below to add your MRI file to be analyzed for Alzheimer's.<br></br></p>
                 <p><input type = "file" className = "mriScan" name = "mri" onChange={changeHandler}/></p>
               </div>
             </div>
