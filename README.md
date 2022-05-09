@@ -39,7 +39,7 @@ Files are as follows:
   
   adSlices.nps: OASIS3 Preprocessed training data, Alzheimers positive
   
-  Preporcessed OASIS Validation.zip: Contains 
+  Preprocessed OASIS Validation.zip: Contains 
   
                 adValidation.npy: OASIS3 Preprocessed test data, Alzheimers positive
                 
