@@ -30,19 +30,6 @@ function App() {
 
     console.log("calling flask");
 
-    renderScan();
-  }
-
-  const renderScan = () => {
-    var reader = new FileReader();
-
-    var imgtag = document.getElementById("output");
-
-    reader.onload = function(event) {
-      imgtag.src = event.target.result;
-    };
-
-    reader.readAsDataURL(selectedFile);
   }
 
 	const changeHandler = (event) => {
@@ -93,7 +80,6 @@ function App() {
         <Col></Col><Col></Col><Col></Col><Col></Col>
           <Col className="centeredBox">
             <div className="predictionOutput">
-              <img className="brainScan" id="output"></img> 
               <div className="content-box predictText">{prediction}</div><br/>
             </div>
           </Col>
