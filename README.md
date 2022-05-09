@@ -29,9 +29,11 @@ Files are as follows:
   #notebook.ipynb (depreciated): Defines the preprocessing steps for original keras model and uses       original 
   model to inference an image from the original Kaggle Dataset.
   
-  package-lock.json: tracks the packages that Node.js uses.
+  package-lock.json: tracks the packages that Node.js uses
   
   package.json: tracks the dependencies for Node.js
+  
+  app.py: flask API for app
   
   nonSlices.npz: OASIS3 Preprocessed training data, Alzheimers negative
   
