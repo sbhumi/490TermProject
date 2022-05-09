@@ -19,17 +19,29 @@ Final Model and weights can be downloaded at:
 https://drive.google.com/file/d/1--trPnVgEJoYr7JjICE7vH4XUCAyqlIP/view?usp=sharing
 
 Files are as follows:
+
+  src: React file folder for the React web app
   
   Transfer_Learning_Kaggle_to_OASIS3.ipynb: The python code used to create the newest model.
   
   createDataset.ipynb: The python code used to preprocess the OASIS3 data for use in our model.
   
-  notebook.ipynb (depreciated): Defines the preprocessing steps for original keras model and uses       original 
+  #notebook.ipynb (depreciated): Defines the preprocessing steps for original keras model and uses       original 
   model to inference an image from the original Kaggle Dataset.
   
   package-lock.json: tracks the packages that Node.js uses.
   
   package.json: tracks the dependencies for Node.js
+  
+  nonSlices.npz: OASIS3 Preprocessed training data, Alzheimers negative
+  
+  adSlices.nps: OASIS3 Preprocessed training data, Alzheimers positive
+  
+  Preporcessed OASIS Validation.zip: Contains 
+  
+                adValidation.npy: OASIS3 Preprocessed test data, Alzheimers positive
+                
+                nonValidation.npy: OASIS3 Preprocessed test data, Alzheimers negative
   
   Acknowledgements: First model created using dataset provided by Kaggle user VISHAKAN SUBRAMANIAN at https://www.kaggle.com/code/vishakansubramanian/alzheimer-s-disease-classification-notebook/data.
   
