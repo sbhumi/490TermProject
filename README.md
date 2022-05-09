@@ -35,6 +35,8 @@ Files are as follows:
   
   app.py: flask API for app
   
+  KaggleModel.ipbyn (depreciated): Code used to create original model using kaggle dataset
+  
   nonSlices.npz: OASIS3 Preprocessed training data, Alzheimers negative
   
   adSlices.nps: OASIS3 Preprocessed training data, Alzheimers positive
