@@ -1,9 +1,13 @@
 CS 490 Python Deep Learning Term Project:
 
 By:
+
 Swetha Bhumireddy
+
 James Ta
+
 Bryan Richlinski
+
 Christian Chapman
 
 This is the final project for CS 490 Python Deep Learning, in which we implement a deep learning network for detecting signs of Alzheimers in MRI brain scans. 
