@@ -1,14 +1,10 @@
-CS 490 Python Deep Learning Term Project:
+# CS 490 Python Deep Learning Term Project:
 
 By:
-
-Swetha Bhumireddy
-
-James Ta
-
-Bryan Richlinski
-
-Christian Chapman
+- Swetha Bhumireddy
+- Christian Chapman
+- Bryan Richlinski
+- James Ta
 
 This is the final project for CS 490 Python Deep Learning, in which we implement a deep learning network for detecting signs of Alzheimers in MRI brain scans. 
 
@@ -22,7 +18,7 @@ https://drive.google.com/file/d/13Hn97t4Lb08mVEMY9DhzOEp90JdEQ1xX/view?usp=shari
 Final Model and weights can be downloaded at:
 https://drive.google.com/file/d/1--trPnVgEJoYr7JjICE7vH4XUCAyqlIP/view?usp=sharing
 
-Files are as follows:
+### Files are as follows:
 
   src: React file folder for the React web app
   
@@ -51,6 +47,8 @@ Files are as follows:
                 
                 nonValidation.npy: OASIS3 Preprocessed test data, Alzheimers negative
   
-  Acknowledgements: First model created using dataset provided by Kaggle user VISHAKAN SUBRAMANIAN at https://www.kaggle.com/code/vishakansubramanian/alzheimer-s-disease-classification-notebook/data.
+  ### Acknowledgements: 
+  
+  First model created using dataset provided by Kaggle user VISHAKAN SUBRAMANIAN at https://www.kaggle.com/code/vishakansubramanian/alzheimer-s-disease-classification-notebook/data.
   
   Second model created using dataset modified from OASIS3 https://central.xnat.org/app/template/Index.vm?login=true. 
